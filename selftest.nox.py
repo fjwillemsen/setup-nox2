@@ -7,21 +7,17 @@ nox.options.error_on_missing_interpreters = True
 nox.options.error_on_external_run = True
 
 pythons = {
-    "win32": ["3.7", "3.8", "3.9", "3.10"],
+    "win32": ["3.7", "3.8", "3.9", "3.10", "3.11"],
     "linux": [
-        "2.7",
-        "3.6",
         "3.7",
         "3.8",
         "3.9",
         "3.10",
-        "pypy2.7",
-        "pypy3.6",
-        "pypy3.7",
-        "pypy3.8",
+        "3.11",
         "pypy3.9",
+        "pypy3.10",
     ],
-    "darwin": ["3.7", "3.8", "3.9", "3.10", "pypy2.7", "pypy3.7", "pypy3.8", "pypy3.9"],
+    "darwin": ["3.7", "3.8", "3.9", "3.10", "3.11", "pypy3.9", "pypy3.10"],
 }[sys.platform]
 
 
