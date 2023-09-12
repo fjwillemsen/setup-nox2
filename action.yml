@@ -1,8 +1,8 @@
 name: "Setup Nox 2"
-description: "Use the Nox testing automation tool for Python in GitHub Actions. Updated fork of setup-nox."
+description: "Updated fork of no longer mainainted 'Setup Nox'. Use the Nox testing automation tool for Python in GitHub Actions."
 author: "Floris-Jan Willemsen"
 branding:
-  icon: "copy"
+  icon: "check-square" # when changing, use https://actions-cool.github.io/github-action-branding/
   color: "green"
 runs:
   using: "node20"

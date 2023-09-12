@@ -1,6 +1,6 @@
 # setup-nox2
 
-Use the Nox testing automation tool for Python in GitHub Actions.
+Use the Nox test automation tool for Python in GitHub Actions.
 Based on the no longer maintained [setup-nox](https://github.com/daisylb/setup-nox) by @daisylb, this action has been updated to provide Node 20 support, as well as updated dependencies. 
 
 [![Test & Lint](https://github.com/fjwillemsen/setup-nox2/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/fjwillemsen/setup-nox2/actions/workflows/test.yml)
@@ -24,7 +24,7 @@ Basic:
 ```yaml
 steps:
   - uses: actions/checkout@v4
-  - uses: fjwillemsen/setup-nox2@v2.1.0
+  - uses: fjwillemsen/setup-nox2@v3.0.0
   - run: nox
 ```
 

@@ -1,8 +1,8 @@
 {
     "name": "setup-nox",
-    "version": "2.1.0",
+    "version": "3.0.0",
     "private": true,
-    "description": "Action to set up Nox",
+    "description": "Action to set up Nox test automation for Python",
     "main": "dist/index.js",
     "scripts": {
         "build": "ncc build src/setup-python.ts",
