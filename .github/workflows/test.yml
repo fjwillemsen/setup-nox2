@@ -23,10 +23,10 @@ jobs:
       - name: Set Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          version: 18.x
+          node-version: 18.x
 
-      - name: npm install
-        run: npm install
+      - name: NPM install
+        run: npm install --production=false
 
       - name: Lint
         run: npm run format-check
