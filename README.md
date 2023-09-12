@@ -1,10 +1,9 @@
-# setup-nox
+# setup-nox2
 
 Use the Nox testing automation tool for Python in GitHub Actions.
+Based on the no longer maintained [setup-nox](https://github.com/daisylb/setup-nox) by @daisylb, this action has been updated to provide Node 18 support (GitHub Actions default as if February 2023), as well as updated dependencies. 
 
-<p align="left">
-  <a href="https://github.com/excitedleigh/setup-nox"><img alt="GitHub Actions status" src="https://github.com/excitedleigh/setup-nox/workflows/Main%20workflow/badge.svg"></a>
-</p>
+[![Test & Lint](https://github.com/fjwillemsen/setup-nox2/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/fjwillemsen/setup-nox2/actions/workflows/test.yml)
 
 This action sets up a Python environment with Nox by:
 
@@ -17,23 +16,22 @@ This action runs in the GitHub Actions environment itself and not in Docker, whi
 
 [actions-installed]: https://github.com/actions/virtual-environments#available-environments
 [nox-docker]: https://hub.docker.com/r/thekevjames/nox
-[original-action]: https://github.com/actions/setup-python
 
-# Usage
+## Usage
 
 Basic:
 
 ```yaml
 steps:
-  - uses: actions/checkout@v2
-  - uses: excitedleigh/setup-nox@v2.0.0
+  - uses: actions/checkout@v4
+  - uses: fjwillemsen/setup-nox2@v2.1.0
   - run: nox
 ```
 
-# License
+## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
 
-# Contributions
+## Contributions
 
 Contributions are welcome! See [Contributor's Guide](docs/contributors.md)
