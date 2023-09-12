@@ -1,17 +1,29 @@
-name: Main workflow
-on: [push]
+name: Test & Lint
+
+on:
+  push:
+    branches:
+      - main
+      - release/*
+  pull_request:
+    branches:
+      - main
+
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
 jobs:
   run:
     name: Code linting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
-      - name: Set Node.js 14.x
-        uses: actions/setup-node@master
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
         with:
-          version: 14.x
+          version: 18.x
 
       - name: npm install
         run: npm install
@@ -29,7 +41,7 @@ jobs:
           - macOS-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
       - name: Setup Nox (this workflow 😱)
         uses: ./
       - name: Run selftest Noxfile
