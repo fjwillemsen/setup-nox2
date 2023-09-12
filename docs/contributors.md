@@ -12,6 +12,6 @@ In order to include something GitHub Actions can run in the repo without  commit
 
 This repo is configured to run [ncc][] and [Prettier][] using [Husky][]; all you need to do is make sure you `npm install`, and then when you `git commit` Husky should run, build the files, and add them to your commit.
 
-[ncc]: https://github.com/zeit/ncc
+[ncc]: https://github.com/vercel/ncc
 [Husky]: https://github.com/typicode/husky
 [Prettier]: https://github.com/prettier/prettier

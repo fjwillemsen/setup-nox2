@@ -1,41 +1,43 @@
 {
-  "name": "setup-nox",
-  "version": "2.0.0",
-  "private": true,
-  "description": "Action to set up Nox",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "ncc build src/setup-python.ts",
-    "format": "prettier --write **/*.ts",
-    "format-check": "prettier --check **/*.ts",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/excitedleigh/setup-nox.git"
-  },
-  "keywords": [
-    "actions",
-    "node",
-    "setup"
-  ],
-  "author": "Leigh Brenecki <leigh@brenecki.id.au>",
-  "license": "MIT",
-  "dependencies": {
-    "@actions/core": "1.9.1",
-    "@actions/tool-cache": "2.0.1"
-  },
-  "devDependencies": {
-    "@types/node": "18.17.15",
-    "@zeit/ncc": "^0.22.3",
-    "husky": "^8.0.0",
-    "prettier": "3.0.3",
-    "typescript": "5.2.2"
-  },
-  "husky": {
-    "skipCI": true,
-    "hooks": {
-      "pre-commit": "npm run format-check && npm run build && git add dist/"
+    "name": "setup-nox",
+    "version": "2.1.0",
+    "private": true,
+    "description": "Action to set up Nox",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "ncc build src/setup-python.ts",
+        "format": "prettier --write **/*.ts",
+        "format-check": "prettier --check **/*.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fjwillemsen/setup-nox2.git"
+    },
+    "keywords": [
+        "actions",
+        "node",
+        "setup"
+    ],
+    "author": "Leigh Brenecki <leigh@brenecki.id.au>",
+    "contributors": [
+        "Floris-Jan Willemsen (https://fjwillemsen.com/)"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "@actions/core": "1.9.1",
+        "@actions/tool-cache": "2.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "18.17.15",
+        "@vercel/ncc": "^0.38.0",
+        "husky": "^8.0.0",
+        "prettier": "3.0.3",
+        "typescript": "5.2.2"
+    },
+    "husky": {
+        "skipCI": true,
+        "hooks": {
+            "pre-commit": "npm run format-check && npm run build && git add dist/"
+        }
     }
-  }
 }
