@@ -8,7 +8,8 @@
         "build": "ncc build src/setup-python.ts",
         "format": "prettier --write **/*.ts",
         "format-check": "prettier --check **/*.ts",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "pre-commit": "npm run format-check && npm run build && git add dist/ && echo 'Successfully ran Husky'"
     },
     "repository": {
         "type": "git",
@@ -34,11 +35,5 @@
         "husky": "^8.0.3",
         "prettier": "3.0.3",
         "typescript": "5.2.2"
-    },
-    "husky": {
-        "skipCI": true,
-        "hooks": {
-            "pre-commit": "npm run format-check && npm run build && git add dist/ && echo 'Successfully ran Husky'"
-        }
     }
 }
