@@ -37,8 +37,7 @@
     "husky": {
         "skipCI": true,
         "hooks": {
-            "pre-commit": "echo 'hello husky'"
-            // "pre-commit": "npm run format-check && npm run build && git add dist/"
+            "pre-commit": "npm run format-check && npm run build && git add dist/ && echo 'Successfully ran Husky'"
         }
     }
 }
