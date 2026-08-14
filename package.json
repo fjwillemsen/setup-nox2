@@ -1,6 +1,6 @@
 {
     "name": "setup-nox",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "private": true,
     "description": "Action to set up Nox test automation for Python",
     "main": "dist/index.js",
@@ -28,14 +28,15 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "@actions/core": "1.9.1",
-        "@actions/tool-cache": "2.0.1"
+        "@actions/core": "^1.11.1",
+        "@actions/tool-cache": "^2.0.2"
     },
     "devDependencies": {
-        "@types/node": "20.6.0",
-        "@vercel/ncc": "^0.38.0",
+        "@types/node": "^24.13.3",
+        "@types/semver": "^7.8.0",
+        "@vercel/ncc": "^0.38.4",
         "husky": "^8.0.3",
-        "prettier": "3.0.3",
-        "typescript": "5.2.2"
+        "prettier": "^3.9.6",
+        "typescript": "^5.9.3"
     }
 }
