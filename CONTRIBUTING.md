@@ -4,6 +4,13 @@ If you discover issues, have ideas for improvements or new features, please repo
 If you feel like addressing the issue yourself, you can help by submitting a pull request (see 'Contributing essentials').
 Please follow these guidelines. 
 
+## Moving general tag after publishing
+After publishing a new release, the major tag must be moved to it like this:
+```
+git tag -fa v4 -m "Update v4 major version tag to v4.0.0" v4.0.0
+git push origin v4 --force
+```
+
 ## Issue reporting
 
 * Check that the issue has not already been reported.
