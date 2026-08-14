@@ -23,8 +23,10 @@ for (const version of allCPythonVersions) {
 }
 
 const NOX_PYTHON_VERSION =
-  maxSatisfying(allCPythonVersions.filter(valid), `*`) ||
-  allCPythonVersions[allCPythonVersions.length - 1]
+  maxSatisfying(
+    allCPythonVersions.filter((v) => !!valid(v)),
+    "*",
+  ) || allCPythonVersions[allCPythonVersions.length - 1]
 console.log("Nox itself will be installed using", NOX_PYTHON_VERSION)
 const NOX_PYTHON_PATH =
   findVersion("Python", NOX_PYTHON_VERSION) +
